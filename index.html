@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What2Wear AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .developers-section {
+            padding: 40px 20px;
+            background: #1a1a1a;
+            margin-top: 40px;
+        }
+
+        .developers-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .developers-title {
+            text-align: center;
+            color: #e5e7eb;
+            font-size: 2em;
+            margin-bottom: 40px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .developers-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+            border-radius: 3px;
+        }
+
+        .developers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .developer-card {
+            background: #262626;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .developer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .developer-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #818cf8;
+            box-shadow: 0 0 20px rgba(129, 140, 248, 0.3);
+        }
+
+        .developer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .developer-card:hover .developer-image img {
+            transform: scale(1.1);
+        }
+
+        .developer-info {
+            color: #e5e7eb;
+        }
+
+        .developer-name {
+            font-size: 1.4em;
+            margin: 0 0 10px;
+            color: #a5b4fc;
+        }
+
+        .developer-details {
+            margin: 5px 0;
+            color: #9ca3af;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 640px) {
+            .developers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .developer-card {
+                max-width: 100%;
+            }
+
+            .developers-section {
+                padding: 30px 15px;
+            }
+        }
+
+        .get-started-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #1aab4d 0%, #22de64 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(26, 171, 77, 0.3);
+        }
+
+        .get-started-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 171, 77, 0.4);
+            background: linear-gradient(135deg, #1ebe56 0%, #1aa349 100%);
+        }
+
+        .get-started-btn:active {
+            transform: translateY(0);
+        }
+
+        .get-started-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .get-started-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .get-started-btn {
+                padding: 12px 25px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-tshirt"></i>
+            <span>What2Wear AI</span>
+        </div>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <i class="fas fa-tshirt" style="font-size: 5rem; color: #83e7a6;"></i>
+            <h1>Your Personal AI Outfit Planner</h1>
+            <p>Let our AI help you plan your outfits for the week. Stay stylish, organized, and confident with personalized fashion recommendations.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Happy Users</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-tshirt"></i>
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Outfits Created</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">User Rating</span>
+                </div>
+            </div>
+            <a href="#chatbot" class="get-started-btn">
+                <span>Get Started</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2><i class="fas fa-info-circle"></i> About Our What2Wear AI</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <i class="fas fa-brain"></i>
+                <h3>Smart AI Technology</h3>
+                <p>Powered by advanced AI algorithms to understand your style preferences and create perfect outfit combinations.</p>
+            </div>
+            <div class="about-card">
+                <i class="fas fa-palette"></i>
+                <h3>Style Expertise</h3>
+                <p>Combines fashion industry knowledge with personal style preferences for unique outfit recommendations.</p>
+            </div>
+            <div class="about-card">
+                <i class="fas fa-clock"></i>
+                <h3>Time-Saving</h3>
+                <p>Plan your entire week's outfits in minutes, saving you precious time in your daily routine.</p>
+            </div>
+            <div class="about-card">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Always Fresh</h3>
+                <p>Never repeat the same outfit combinations with our diverse suggestion algorithm.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2><i class="fas fa-star"></i> Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Weekly Planning</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Plan outfits for the entire week</li>
+                    <li><i class="fas fa-check"></i> Weather-appropriate suggestions</li>
+                    <li><i class="fas fa-check"></i> Special occasion outfits</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Style Personalization</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Learn your preferences</li>
+                    <li><i class="fas fa-check"></i> Color coordination</li>
+                    <li><i class="fas fa-check"></i> Accessory suggestions</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Smart Suggestions</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Mix and match ideas</li>
+                    <li><i class="fas fa-check"></i> Style tips and tricks</li>
+                    <li><i class="fas fa-check"></i> Seasonal adaptations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="chatbot" class="chatbot">
+        <div class="chatbot-title">
+            <i class="fas fa-robot"></i>
+            <h2>What2Wear AI Chat</h2>
+            <button class="minimize-btn"><i class="fas fa-minus"></i></button>
+        </div>
+        <div class="chat-container">
+            <div class="chat-messages"></div>
+            <div class="typing-indicator hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Ask for outfit suggestions...">
+                <button class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <div class="loading-spinner hidden"></div>
+    </section>
+
+    <section class="developers-section">
+        <div class="developers-container">
+            <h2 class="developers-title">Meet the Developers</h2>
+            <div class="developers-grid">
+                <div class="developer-card">
+                    <div class="developer-image">
+                        <img src="Profile.jpeg" alt="Developer 1" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="developer-info">
+                        <h3 class="developer-name">VARDHAN VARIKUTI</h3>
+                        <p class="developer-details">Registration: 12316303</p>
+                        <p class="developer-details">Section: K23SM</p>
+                    </div>
+                </div>
+                <div class="developer-card">
+                    <div class="developer-image">
+                        <img src="picofme-11.png" alt="Developer 2" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="developer-info">
+                        <h3 class="developer-name">MADHUSMITA TALUKDAR</h3>
+                        <p class="developer-details">Registration: 12314142</p>
+                        <p class="developer-details">Section: K23SM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <br>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>LPU, Punjab, India</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91-9392809071</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support@what2wearai.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#chatbot">AI Chat</a></li>
+                    <li><a href="#features">Weekly Planning</a></li>
+                    <li><a href="#features">Style Tips</a></li>
+                    <li><a href="#features">Personalization</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for the latest fashion tips and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 What2Wear AI. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
