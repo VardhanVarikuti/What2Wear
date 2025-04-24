@@ -119,12 +119,10 @@ What2Wear is an intelligent outfit recommendation system that helps users create
 ## Developers
 
 ### VARDHAN VARIKUTI
-- Registration: 12316303
-- Roll: K23SM
+
 
 ### MADHUSMITA TALUKDAR
-- Registration: 12314142
-- Roll: K23SM
+
 
 ## Contributing
 
