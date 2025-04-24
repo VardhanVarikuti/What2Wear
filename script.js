@@ -12,9 +12,9 @@ const ctaButton = document.querySelector('.cta-button');
 const chatInput = document.getElementById('chat-input');
 
 // API Configuration
-const GEMINI_API_KEY = '';//Replace with your gemini API
+const GEMINI_API_KEY = 'AIzaSyA0HIWxAMU9i8PptW0UAGI7O44CXa8RiR0';
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent';
-const WEATHER_API_KEY = ''; // Replace with your OpenWeather API key
+const WEATHER_API_KEY = 'cb3a6dea50bfcc07eac18b9a610e1ac9'; // Replace with your OpenWeather API key
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 // State
